@@ -7,8 +7,8 @@ const app = express();
 const port = config.get("port");
 
 //Middleware
-app.use("/api/v1/items", itemsRouter);
 app.use(express.json());
+app.use("/api/v1/items", itemsRouter);
 
 const start = async () => {
   try {

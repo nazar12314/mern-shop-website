@@ -5,7 +5,7 @@ const databaseName = config.get("databaseName");
 const databasePassword = config.get("databasePassword");
 
 const connect = async () => {
-  mongoose.connect(
+  return mongoose.connect(
     `mongodb+srv://${databaseName}:${databasePassword}@cluster0.y2vlb.mongodb.net/shopApi?retryWrites=true&w=majority`,
     console.log("Connection established")
   );
